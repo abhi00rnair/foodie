@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodie/pages/bottom.dart';
 import 'package:foodie/pages/home.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: home(),
+      home: bottom(),
     );
   }
 }

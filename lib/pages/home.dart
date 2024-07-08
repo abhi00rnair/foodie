@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:';
 import 'package:flutter/widgets.dart';
+import 'package:foodie/pages/details.dart';
 import 'package:foodie/pages/widgets/supprtwidget.dart';
 
 class home extends StatefulWidget {
@@ -66,32 +67,43 @@ class _HomeState extends State<home> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(4),
-                    child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(20),
-                      child: Container(
-                        padding: EdgeInsets.all(14),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              'lib/images/mushroom-salad.jpg',
-                              height: 150,
-                              width: 150,
-                              fit: BoxFit.cover,
-                            ),
-                            Text('mushroom salad', style: Appwidget.boldText()),
-                            Text(
-                              'salty flavoured',
-                              style: Appwidget.styel1(),
-                            ),
-                            Text(
-                              '\$25',
-                              style: Appwidget.styel1(),
-                            )
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Details(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(4),
+                      child: Material(
+                        elevation: 5.0,
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          padding: EdgeInsets.all(14),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                'lib/images/mushroom-salad.jpg',
+                                height: 150,
+                                width: 150,
+                                fit: BoxFit.cover,
+                              ),
+                              Text('mushroom salad',
+                                  style: Appwidget.boldText()),
+                              Text(
+                                'salty flavoured',
+                                style: Appwidget.styel1(),
+                              ),
+                              Text(
+                                '\$25',
+                                style: Appwidget.styel1(),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
