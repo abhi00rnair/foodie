@@ -53,7 +53,7 @@ class _DetailsState extends State<Details> {
               style: Appwidget.styel1(),
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Row(
               children: [
