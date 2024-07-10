@@ -9,4 +9,8 @@ class Appwidget {
   static TextStyle styel1() {
     return const TextStyle(fontSize: 15);
   }
+
+  static TextStyle style2() {
+    return const TextStyle(fontWeight: FontWeight.bold, fontSize: 15);
+  }
 }

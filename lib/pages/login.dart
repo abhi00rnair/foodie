@@ -16,17 +16,9 @@ class _loginState extends State<login> {
         child: Stack(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 2,
+              height: MediaQuery.of(context).size.height / 1.5,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  const Color.fromRGBO(255, 0, 0, 0.8),
-                  const Color.fromRGBO(255, 0, 0, 0.8),
-                ],
-              )),
+              decoration: BoxDecoration(color: Colors.black),
             ),
             Container(
               margin:
@@ -34,7 +26,7 @@ class _loginState extends State<login> {
               height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
@@ -48,20 +40,20 @@ class _loginState extends State<login> {
                 children: [
                   Center(
                     child: Image.asset(
-                      'lib/images/foodie.png',
+                      'lib/images/foodoo.jpg',
                       width: MediaQuery.of(context).size.width / 1.5,
                       fit: BoxFit.cover,
                     ),
                   ),
                   SizedBox(
-                    height: 0,
+                    height: 20,
                   ),
                   Material(
                     elevation: 5,
                     borderRadius: BorderRadius.circular(10),
                     child: Container(
                       padding: EdgeInsets.only(left: 20, right: 20),
-                      height: MediaQuery.of(context).size.height / 1.9,
+                      height: MediaQuery.of(context).size.height / 2.5,
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -89,6 +81,16 @@ class _loginState extends State<login> {
                                 hintText: 'Password',
                                 hintStyle: Appwidget.styel1(),
                                 prefixIcon: Icon(Icons.password)),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Container(
+                            alignment: Alignment.topRight,
+                            child: Text(
+                              'forgot password?',
+                              style: Appwidget.style2(),
+                            ),
                           )
                         ],
                       ),
