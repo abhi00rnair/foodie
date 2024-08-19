@@ -1,4 +1,4 @@
-# foodie
+# foodie app
 
 A new Flutter project.
 
